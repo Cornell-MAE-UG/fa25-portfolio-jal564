@@ -2,7 +2,7 @@
 layout: project
 title: Actuator
 description: Statics HW "#"12
-technologies: [SolidWorks, Machining]
+technologies: [Notes]
 image: /assets/images/Screenshot 2025-12-08 225720.png
 ---
 
