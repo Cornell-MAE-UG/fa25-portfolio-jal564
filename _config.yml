@@ -13,7 +13,8 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : James Larrabee
 description              : James Larrabee - Projects and CV 
-baseurl                  : "" # Set this to your repo name 
+baseurl                  : "/fa25-portfolio-jal564"
+ 
 
 # Theme and Style
 theme: jekyll-theme-minimal
