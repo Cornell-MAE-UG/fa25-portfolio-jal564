@@ -64,8 +64,7 @@ For this model, it makes sense to neglect heat transfer, as a turbine
 can be reasonably modeled as adiabatic without significantly affecting
 its operation, meaning the \(Q\) term can be dropped.
 
-![Diagram]({{ "/assets/images/Screenshot 2025-12-20 153417.jpg" |
-relative_url }}){: style="width:100%; display:block;" }
+
 
 But due to limitations in the coursework I have taken, I am unable to
 calculate the relative entropy change of the system, as that would
@@ -97,10 +96,6 @@ can be found by multiplying volumetric creek flow by water's density.
 For this part, I used USGS.gov's automatic measurements of the
 discharge of Fall Creek to see how power output changes over the
 course of the year with different variable water flow rates.
-
-$$
-\dot{W} = \dot{m} \, g \, \Delta z
-$$
 
 ## Results
 USGS provides flow rate in cubic ft per second, for measurements taken
