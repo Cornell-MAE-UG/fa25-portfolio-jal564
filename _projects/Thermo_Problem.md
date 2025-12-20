@@ -2,7 +2,7 @@
 layout: project
 title: Thermodynamics System Analysis
 description: Turbine Analysis Project
-image: /assets/images/thermo ec/cornellhydrogen.jpg
+image: /assets/images/cornellhydrogen.jpg
 ---
 
 <div class="info-box" style="border-left-color: #0077cc; background:#f2f7ff;">
@@ -17,7 +17,7 @@ percent of the University's consumption each year.</p>
 
 ## Overview
 
-![Aerial Image]({{ "/assets/images/thermo ec/cornell_hydro.jpg" |
+![Aerial Image]({{ "/assets/images/cornell_hydro.jpg" |
 relative_url }}){: style="width:100%; display:block;" }
 Source: [Cornellians](https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Falumni.cornell.edu%2Fcornellians%2Fhydroelectric-plant%2F&data=05%7C02%7Carh258%40cornell.edu%7C4684b8b47d7749fe01fb08de3f7d45a7%7C5d7e43661b9b45cf8e79b14b27df46e1%7C0%7C0%7C639018004459737579%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=EHC2SMie0NRK78FjfSlN%2Bu1X05lcOA0Kb62pz%2B7LGY4%3D&reserved=0)
 
@@ -37,11 +37,11 @@ blades twice, hence the "cross-flow" name, maximizing the amount of
 energy that can be harnessed. Water finally exits on the opposite side
 and is free to continue through the waterway.
 
-![Diagram]({{ "/assets/images/thermo ec/ossberger_diagram.png" |
+![Diagram]({{ "/assets/images/ossberger_diagram.png" |
 relative_url }}){: style="width:100%; display:block;" }
 Source: [Ossberger](https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.ossberger.de%2Fen%2Fhydropower-technology%2Fossbergerr-crossflow-turbine&data=05%7C02%7Carh258%40cornell.edu%7C4684b8b47d7749fe01fb08de3f7d45a7%7C5d7e43661b9b45cf8e79b14b27df46e1%7C0%7C0%7C639018004459775894%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=swNnQFF%2BSC5rY12jeSFHEEFkicA67%2FUS5VZ3lEFxMKk%3D&reserved=0)
 
-![Diagram]({{ "/assets/images/thermo ec/turbine_diagram_flow.jpg" |
+![Diagram]({{ "/assets/images/turbine_diagram_flow.jpg" |
 relative_url }}){: style="width:100%; display:block;" }
 Source: [Pump Fundamentals](https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.pumpfundamentals.com%2Fimages%2Fossberger.jpg&data=05%7C02%7Carh258%40cornell.edu%7C4684b8b47d7749fe01fb08de3f7d45a7%7C5d7e43661b9b45cf8e79b14b27df46e1%7C0%7C0%7C639018004459793753%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=T5Cxp8iq43naQLhG%2BjjKehcnsxxeqNZmhuA5PQ4tAc4%3D&reserved=0)
 
@@ -183,11 +183,11 @@ unable to be taken--water was frozen.
 <span style="display:block; margin-top:12px;"></span>
 
 Discharge of water over the course of the year:
-![Discharge]({{ "/assets/images/thermo ec/graph_one.jpg" |
+![Discharge]({{ "/assets/images/graph_one.jpg" |
 relative_url }}){: style="width:100%; display:block;" }
 
 Power output:
-![Power Output]({{ "/assets/images/thermo ec/graph_two.jpg" |
+![Power Output]({{ "/assets/images/graph_two.jpg" |
 relative_url }}){: style="width:100%; display:block;" }
 
 &nbsp;
