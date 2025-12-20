@@ -2,12 +2,12 @@
 layout: project
 title: Thermodynamics System Analysis
 description: Turbine Analysis Project
-image: /assets/images/thermo-ec/cornellhydrogen.jpg
+image: /fa25-portfolio-jal564/assets/images/thermo-ec/cornellhydrogen.jpg
 ---
 
-<div class="info-box" style="border-left-color: #0077cc; background:#f2f7ff;">
-  <h3 style="color: black;">Project Outline</h3>
-  <p style="color: black;">
+<div class="info-box" style="border-left-color:#0077cc; background:#f2f7ff;">
+  <h3 style="color:black;">Project Outline</h3>
+  <p style="color:black;">
     In Thermodynamics class, I was tasked with exploring a specific,
     real-world device that implements the principles we had learned in
     class. I chose the turbine used by Cornell's hydroelectric power
@@ -19,11 +19,11 @@ image: /assets/images/thermo-ec/cornellhydrogen.jpg
 
 ## Overview
 
-![Aerial Image]({{ "/assets/images/thermo-ec/cornell_hydro.jpg" | relative_url }})
-Source: [Cornellians](https://alumni.cornell.edu/cornellians/hydroelectric-plant/)
+![Aerial Image](/fa25-portfolio-jal564/assets/images/thermo-ec/cornell_hydro.jpg)
+Source: Cornellians
 
-![Artist's Rendering]({{ "/assets/images/thermo-ec/cornell_hydro_drawing.jpg" | relative_url }})
-Source: [Cornell Facilities](https://fcs.cornell.edu/departments/energy-sustainability/district-energy-water/hydroelectric-power)
+![Artist's Rendering](/fa25-portfolio-jal564/assets/images/thermo-ec/cornell_hydro_drawing.jpg)
+Source: Cornell Facilities
 
 The plant uses two Ossberger cross-flow turbines. We chose to analyze
 the second unit listed on the Cornell Facilities page, named the
@@ -36,11 +36,11 @@ direct the water across the turbine’s blades twice, hence the
 harnessed. Water finally exits on the opposite side and continues
 through the waterway.
 
-![Ossberger Diagram]({{ "/assets/images/thermo-ec/ossberger_diagram.png" | relative_url }})
-Source: [Ossberger](https://www.ossberger.de/en/hydropower-technology/ossbergerr-crossflow-turbine)
+![Ossberger Diagram](/fa25-portfolio-jal564/assets/images/thermo-ec/ossberger_diagram.png)
+Source: Ossberger
 
-![Flow Diagram]({{ "/assets/images/thermo-ec/turbine_diagram_flow.jpg" | relative_url }})
-Source: [Pump Fundamentals](https://www.pumpfundamentals.com/images/ossberger.jpg)
+![Flow Diagram](/fa25-portfolio-jal564/assets/images/thermo-ec/turbine_diagram_flow.jpg)
+Source: Pump Fundamentals
 
 A benefit of cross-flow turbines is that they operate adequately at a
 variety of flow rates, and their efficiency remains relatively
@@ -56,61 +56,40 @@ running water makes a control mass model unrealistic.
 
 ### Entropy Balance (Control Volume)
 
-\[
-\frac{dS_{CV}}{dt} =
-\sum_\text{in} \dot{m}_\text{in} s_\text{in}
-- \sum_\text{out} \dot{m}_\text{out} s_\text{out}
-+ \sum_k \frac{\dot{Q}}{T_b}
-+ \sigma_\text{gen}
-\]
+[ dS_CV / dt  
+= Σ(ṁ_in s_in) − Σ(ṁ_out s_out)  
++ Σ(Q̇ / T_b) + σ_gen ]
 
 Under steady state:
 
-\[
-0 = \dot{m}(s_\text{in} - s_\text{out})
-+ \sum_k \frac{\dot{Q}}{T_b}
-+ \sigma_\text{gen}
-\]
+[ 0 = ṁ(s_in − s_out) + Σ(Q̇ / T_b) + σ_gen ]
 
-For this model, it makes sense to neglect heat transfer, as turbines
-can be reasonably modeled as adiabatic without significantly
-affecting operation:
+Neglecting heat transfer (adiabatic turbine):
 
-\[
-0 = \dot{m}(s_\text{in} - s_\text{out}) + \sigma_\text{gen}
-\]
+[ 0 = ṁ(s_in − s_out) + σ_gen ]
 
 Due to limitations in current coursework, calculating entropy
 generation directly would require modeling turbulent flow, wall
 friction, and internal irreversibilities beyond scope. For this
-reason, the system is treated as approximately isentropic, with
-future work planned for a more complete analysis.
+reason, the system is treated as approximately isentropic.
 
 ### Mass Balance
 
 Under steady state:
 
-\[
-\sum_\text{in} \dot{m}_\text{in} = \sum_\text{out} \dot{m}_\text{out}
-\]
+[ Σ ṁ_in = Σ ṁ_out ]
 
 ### Energy Balance
 
-\[
-\frac{dE_{CV}}{dt} =
-\dot{Q} - \dot{W}
-+ \sum_\text{in} \dot{m}_\text{in}
-\left(h + \frac{v^2}{2} + gz\right)
-- \sum_\text{out} \dot{m}_\text{out}
-\left(h + \frac{v^2}{2} + gz\right)
-\]
+[ dE_CV / dt  
+= Q̇ − Ẇ  
++ Σ ṁ(h + v²/2 + gz)_in  
+− Σ ṁ(h + v²/2 + gz)_out ]
 
-Assuming steady state, negligible heat transfer, and constant enthalpy
-and velocity, the power output simplifies to:
+Assuming steady state, negligible heat transfer, and constant
+enthalpy and velocity:
 
-\[
-\dot{W} = \dot{m} g \Delta z
-\]
+[ Ẇ = ṁ g Δz ]
 
 Mass flow rate is calculated from volumetric discharge data provided
 by the USGS for Fall Creek.
@@ -134,7 +113,7 @@ water_flow = readtable("water flow data fall creek.csv", opts);
 wf = table2array(water_flow(:, "Water"));
 wf = flip(wf);
 
-wf = wf * 0.3048^3;
+wf = wf * 0.3048^3; % cfs to m^3/s
 
 time = 1:2619;
 
@@ -144,9 +123,9 @@ title("Fall Creek Discharge Over Time")
 xlabel("Index")
 ylabel("Volume Flow Rate [m^3/s]")
 
-mf = wf * 1000;
+mf = wf * 1000; % kg/s
 power = mf * (9.81 * 35);
-power = power / 1e6;
+power = power / 1e6; % MW
 
 figure;
 plot(time, power)
