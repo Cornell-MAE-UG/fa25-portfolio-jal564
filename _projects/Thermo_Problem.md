@@ -57,26 +57,15 @@ running water makes a control model approximation unrealistic.
 
 Entropy balance for a control volume system:
 
-$$
-\frac{dS_{CV}}{dt} = \sum_\text{in} \dot{m}_\text{in} s_\text{in}
-- \sum_\text{out} \dot{m}_\text{out} s_\text{out}
-+ \sum_k \frac{\dot{Q}}{T_b} + \sigma_\text{gen}
-$$
-
-Under steady state:
-
-$$
-0 = \dot{m} \, (s_\text{in} - s_\text{out})
-+ \sum_k \frac{\dot{Q}}{T_b} + \sigma_\text{gen}
-$$
+![Diagram]({{ "/assets/images/entropybalance.jpg" |
+relative_url }}){: style="width:100%; display:block;" }
 
 For this model, it makes sense to neglect heat transfer, as a turbine
 can be reasonably modeled as adiabatic without significantly affecting
 its operation, meaning the \(Q\) term can be dropped.
 
-$$
-0 = \dot{m} \, (s_\text{in} - s_\text{out}) + \sigma_\text{gen}
-$$
+![Diagram]({{ "/assets/images/Screenshot 2025-12-20 153417.jpg" |
+relative_url }}){: style="width:100%; display:block;" }
 
 But due to limitations in the coursework I have taken, I am unable to
 calculate the relative entropy change of the system, as that would
@@ -89,21 +78,8 @@ modeling the system as isentropic with no entropy generation.
 Turning to a mass balance for a control volume system:
 Under steady state:
 
-$$
-\dot{m}_\text{cv} = \sum_\text{in} \dot{m}_\text{in} - \sum_\text{out}
-\dot{m}_\text{out}
-\implies \sum_\text{in} \dot{m}_\text{in} = \sum_\text{out} \dot{m}_\text{out}
-$$
-
-Energy balance for a control volume system:
-
-$$
-\frac{dE_{CV}}{dt} = \dot{Q} - \dot{W}
-+ \sum_\text{in} \dot{m}_\text{in} \left(h_\text{in} +
-\frac{v_\text{in}^2}{2} + g z_\text{in}\right)
-- \sum_\text{out} \dot{m}_\text{out} \left(h_\text{out} +
-\frac{v_\text{out}^2}{2} + g z_\text{out}\right)
-$$
+![Diagram]({{ "/assets/images/massbalance.jpg" |
+relative_url }}){: style="width:100%; display:block;" }
 
 
 
