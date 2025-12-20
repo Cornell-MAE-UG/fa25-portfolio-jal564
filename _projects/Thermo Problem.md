@@ -19,10 +19,10 @@ image: /assets/images/thermo-ec/cornellhydrogen.jpg
 
 ## Overview
 
-![Aerial Image]({{ "/assets/images/thermo-ec/cornell_hydro.jpg" | relative_url }}){: style="width:100%; display:block;" }
+![Aerial Image]({{ "/assets/images/thermo-ec/cornell_hydro.jpg" | relative_url }})
 Source: [Cornellians](https://alumni.cornell.edu/cornellians/hydroelectric-plant/)
 
-![Artist's Rendering]({{ "/assets/images/thermo-ec/cornell_hydro_drawing.jpg" | relative_url }}){: style="width:100%; display:block;" }
+![Artist's Rendering]({{ "/assets/images/thermo-ec/cornell_hydro_drawing.jpg" | relative_url }})
 Source: [Cornell Facilities](https://fcs.cornell.edu/departments/energy-sustainability/district-energy-water/hydroelectric-power)
 
 The plant uses two Ossberger cross-flow turbines. We chose to analyze
@@ -31,15 +31,15 @@ the second unit listed on the Cornell Facilities page, named the
 
 In these types of systems, water typically flows in from a body of
 water and passes through inlet guides. These regulate flow rate and
-direct the water across the turbine's blades twice, hence the
-"cross-flow" name, maximizing the amount of energy that can be
+direct the water across the turbine’s blades twice, hence the
+“cross-flow” name, maximizing the amount of energy that can be
 harnessed. Water finally exits on the opposite side and continues
 through the waterway.
 
-![Ossberger Diagram]({{ "/assets/images/thermo-ec/ossberger_diagram.png" | relative_url }}){: style="width:100%; display:block;" }
+![Ossberger Diagram]({{ "/assets/images/thermo-ec/ossberger_diagram.png" | relative_url }})
 Source: [Ossberger](https://www.ossberger.de/en/hydropower-technology/ossbergerr-crossflow-turbine)
 
-![Flow Diagram]({{ "/assets/images/thermo-ec/turbine_diagram_flow.jpg" | relative_url }}){: style="width:100%; display:block;" }
+![Flow Diagram]({{ "/assets/images/thermo-ec/turbine_diagram_flow.jpg" | relative_url }})
 Source: [Pump Fundamentals](https://www.pumpfundamentals.com/images/ossberger.jpg)
 
 A benefit of cross-flow turbines is that they operate adequately at a
@@ -56,29 +56,29 @@ running water makes a control mass model unrealistic.
 
 ### Entropy Balance (Control Volume)
 
-$$
+\[
 \frac{dS_{CV}}{dt} =
 \sum_\text{in} \dot{m}_\text{in} s_\text{in}
 - \sum_\text{out} \dot{m}_\text{out} s_\text{out}
 + \sum_k \frac{\dot{Q}}{T_b}
 + \sigma_\text{gen}
-$$
+\]
 
 Under steady state:
 
-$$
+\[
 0 = \dot{m}(s_\text{in} - s_\text{out})
 + \sum_k \frac{\dot{Q}}{T_b}
 + \sigma_\text{gen}
-$$
+\]
 
 For this model, it makes sense to neglect heat transfer, as turbines
 can be reasonably modeled as adiabatic without significantly
 affecting operation:
 
-$$
+\[
 0 = \dot{m}(s_\text{in} - s_\text{out}) + \sigma_\text{gen}
-$$
+\]
 
 Due to limitations in current coursework, calculating entropy
 generation directly would require modeling turbulent flow, wall
@@ -90,27 +90,27 @@ future work planned for a more complete analysis.
 
 Under steady state:
 
-$$
+\[
 \sum_\text{in} \dot{m}_\text{in} = \sum_\text{out} \dot{m}_\text{out}
-$$
+\]
 
 ### Energy Balance
 
-$$
+\[
 \frac{dE_{CV}}{dt} =
 \dot{Q} - \dot{W}
 + \sum_\text{in} \dot{m}_\text{in}
 \left(h + \frac{v^2}{2} + gz\right)
 - \sum_\text{out} \dot{m}_\text{out}
 \left(h + \frac{v^2}{2} + gz\right)
-$$
+\]
 
 Assuming steady state, negligible heat transfer, and constant enthalpy
 and velocity, the power output simplifies to:
 
-$$
+\[
 \dot{W} = \dot{m} g \Delta z
-$$
+\]
 
 Mass flow rate is calculated from volumetric discharge data provided
 by the USGS for Fall Creek.
@@ -126,33 +126,28 @@ unavailable due to frozen conditions.
 ```matlab
 close all; % file setup
 
-% importing data from spreadsheet
 opts = detectImportOptions("water flow data fall creek.csv");
 opts.VariableNamesLine = 0;
 opts.VariableNames = ["Water", "Unit"];
 water_flow = readtable("water flow data fall creek.csv", opts);
 
-% data formatting
 wf = table2array(water_flow(:, "Water"));
-wf = flip(wf); % most recent data points were at top so I flipped
+wf = flip(wf);
 
-wf = wf * 0.3048^3; % cfs to cms
+wf = wf * 0.3048^3;
 
-time = 1:2619; % index of times taken, every 3:15 hours
+time = 1:2619;
 
-% Discharge Plot
 figure;
 plot(time, wf)
 title("Fall Creek Discharge Over Time")
 xlabel("Index")
 ylabel("Volume Flow Rate [m^3/s]")
 
-% Power Calculations
-mf = wf * 1000; % mass flow rate (kg/s)
+mf = wf * 1000;
 power = mf * (9.81 * 35);
-power = power / 1e6; % convert to MW
+power = power / 1e6;
 
-% Power Plot
 figure;
 plot(time, power)
 title("Power Produced Over Time")
