@@ -18,6 +18,7 @@ image: /fa25-portfolio-jal564/assets/images/thermo-ec/cornellhydrogen.jpg
 </div>
 
 ## Overview
+<img src="/fa25-portfolio-jal564/assets/images/thermo-ec/cornell_hydro.jpg">
 
 ![Aerial Image](/fa25-portfolio-jal564/assets/images/thermo-ec/cornell_hydro.jpg)
 Source: Cornellians
