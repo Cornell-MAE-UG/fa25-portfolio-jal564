@@ -38,7 +38,8 @@ markdown: kramdown
 kramdown:
   input: GFM
   math_engine: mathjax
-
+  math_engine_opts:
+    preview: true
 # Plugins (previously gems:)
 plugins:
   - jekyll-feed

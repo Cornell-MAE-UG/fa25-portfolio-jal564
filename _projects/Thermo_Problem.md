@@ -21,8 +21,7 @@ percent of the University's consumption each year.</p>
 relative_url }}){: style="width:100%; display:block;" }
 Source: [Cornellians](https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Falumni.cornell.edu%2Fcornellians%2Fhydroelectric-plant%2F&data=05%7C02%7Carh258%40cornell.edu%7C4684b8b47d7749fe01fb08de3f7d45a7%7C5d7e43661b9b45cf8e79b14b27df46e1%7C0%7C0%7C639018004459737579%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=EHC2SMie0NRK78FjfSlN%2Bu1X05lcOA0Kb62pz%2B7LGY4%3D&reserved=0)
 
-![Artist's Rendering]({{ "/assets/images/thermo
-ec/cornell_hydro_drawing.jpg" | relative_url }}){: style="width:100%;
+![Artist's Rendering]({{ "/assets/images/cornell_hydro_drawing.jpg" | relative_url }}){: style="width:100%;
 display:block;" }
 Source: [Cornell
 Facilities](https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffcs.cornell.edu%2Fdepartments%2Fenergy-sustainability%2Fdistrict-energy-water%2Fhydroelectric-power&data=05%7C02%7Carh258%40cornell.edu%7C4684b8b47d7749fe01fb08de3f7d45a7%7C5d7e43661b9b45cf8e79b14b27df46e1%7C0%7C0%7C639018004459756750%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=lszH2ae11MWBAlhTsGlsN3QscgriZT6VNguf61zN%2Fgg%3D&reserved=0)
@@ -195,3 +194,5 @@ relative_url }}){: style="width:100%; display:block;" }
 Clearly, power output depends on the volumetric discharge of the river
 and has varying power outputs depending on the season and daily
 weather.
+
+I worked on this with Andrew Nocily, Audrey Hubbell and Annika Terezakis
