@@ -11,4 +11,6 @@ image: /assets/images/SLF.jpeg
 
 
 Here is the first look of our client pitch!
-({{ "/assets/Guardians_of_the_Grapevine_Client_Pitch.pdf" | relative_url }})
+<a href="{{ '/assets/Guardians_of_the_Grapevine_Client_Pitch.pdf' | relative_url }}" target="_blank">
+  View the Client Pitch PDF
+</a>
