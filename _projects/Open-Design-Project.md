@@ -14,3 +14,9 @@ Here is the first look of our client pitch!
 <a href="{{ '/assets/Guardians_of_the_Grapevine_Client_Pitch.pdf' | relative_url }}" target="_blank">
   View the Client Pitch PDF
 </a>
+
+
+We have a New Client Pitch following a semester of work. Click here for the file!
+<a href="{{ '/assets/Guardians_of_the_Grapevine_Client_Report.pdf' | relative_url }}" target="_blank">
+  View the Client Pitch PDF
+</a>
